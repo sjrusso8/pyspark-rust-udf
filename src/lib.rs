@@ -15,7 +15,7 @@ fn cdf_rs(a: f64) -> PyResult<f64> {
     Ok(Normal::new(0.0, 1.0).unwrap().cdf(a))
 }
 
-/// Subtract mean
+/// Compute mean and subtract from each element
 #[pyfunction]
 fn subtract_mean_rs(a: Vec<f64>) -> PyResult<Vec<f64>> {
     let mean = a.clone().mean();
